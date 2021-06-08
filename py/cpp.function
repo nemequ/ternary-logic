@@ -1,4 +1,6 @@
-// %(COMMENT)s
-template<> %(TYPE)s %(NAME)s<0x%(CODE)02x>(const %(TYPE)s A, const %(TYPE)s B, const %(TYPE)s C) {
+SIMDE_FUNCTION_ATTRIBUTES
+%(TYPE)s
+simde_x_%(EXTENTION)sternarylogic_0x%(CODE)02x_impl_(%(ARGUMENT)s) {
     %(BODY)s
 }
+

@@ -182,7 +182,6 @@ class CodeGenerator:
         paths = {
             'optimized': 'data/manually_optimized.txt',
             'automat'  : 'data/sse_and_avx2.txt',
-            'neon'     : 'data/neon.txt',
             'xop'      : 'data/xop.txt',
         }
 
@@ -199,13 +198,51 @@ class CodeGenerator:
         from lib.bodygen import BodyGenerator
         g = BodyGenerator(lowered, self.assembler_class())
         body = g.run()
+        
+        A_active = 0
+        B_active = 0
+        C_active = 0
+
+        argument = ""
+        for statements in body:
+            if statements.find('A') >= 0:
+                A_active = 1
+            if statements.find('B') >= 0:
+                B_active = 1
+            if statements.find('C') >= 0:
+                C_active = 1
+
+        if A_active:
+            argument += self.assembler_class().type + " A"
+        if B_active:
+            if A_active:
+                argument += ", "
+            argument += self.assembler_class().type + " B"
+        if C_active:
+            if B_active or A_active:
+                argument += ", "
+            argument += self.assembler_class().type + " C"
+
+        extention = ""
+        if self.options.target == Target_SSE:
+            extention = "mm_"
+        elif self.options.target == Target_AVX2:
+            extention = "mm256_"
+        elif self.options.target == Target_AVX512:
+            extention = "mm512_"
+        elif self.options.target == Target_XOP:
+            extention = "mm_"
+        else:
+            extention = ""
 
         params = {
             'TYPE'  : self.assembler_class().type,
             'NAME'  : self.options.name,
             'CODE'  : code,
             'BODY'  : indent_lines(body, self.body_indent),
-            'COMMENT' : comment
+            'COMMENT' : comment,
+            'EXTENTION' : extention,
+            'ARGUMENT' : argument
         }
 
         return (len(body), self.function_pattern % params)

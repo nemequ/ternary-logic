@@ -15,7 +15,7 @@ class AssemblerX86(Assembler):
 
     def add_true(self):
         var  = 'c1'
-        expr = '%s %s = %s(-1);' % (self.const_type, var, self.type)
+        expr = '%s %s = UINT32_C(-1);' % (self.const_type, var)
 
         return (var, expr)
 
@@ -52,6 +52,12 @@ class AssemblerX86(Assembler):
 class AssemblerX86_64(AssemblerX86):
     def __init__(self):
         AssemblerX86.__init__(self, 'uint64_t')
+
+    def add_true(self):
+        var  = 'c1'
+        expr = '%s %s = UINT64_C(-1);' % (self.const_type, var)
+
+        return (var, expr)
 
 
 class AssemblerX86_32(AssemblerX86):
