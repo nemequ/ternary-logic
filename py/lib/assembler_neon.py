@@ -4,7 +4,7 @@ class AssemblerNEON(Assembler):
 
     def __init__(self):
         Assembler.__init__(self)
-        self.type = 'int32x4_t'
+        self.type = 'simde_int32x4_t'
         self.const_type = 'const %s' % (self.type)
 
     def add_false(self):

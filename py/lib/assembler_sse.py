@@ -4,7 +4,7 @@ class AssemblerSSE(Assembler):
 
     def __init__(self):
         Assembler.__init__(self)
-        self.type = '__m128i'
+        self.type = 'simde__m128i'
         self.const_type = 'const %s' % (self.type)
 
     def add_false(self):
