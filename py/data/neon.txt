@@ -1,0 +1,282 @@
+# (A notand (B xor C))
+06 notandAxorBC
+# ((A notand B) and C)
+08 andnotandABC
+# (A notand (B notor C))
+0b notandAnotorBC
+# (A notand (C notor B))
+0d notandAnotorCB
+# (A notand (B or C))
+0e notandAorBC
+# (B notand (A xor C))
+12 notandBxorAC
+# (C notand (A xor B))
+14 notandCxorAB
+# ((A and (B xor C)) xor (B notor (B xor C)))
+17 xorandAxorBCnotorBxorBC
+# ((A xor B) and (A xor C))
+18 andxorABxorAC
+# ((A and B) notand (B xor not (C)))
+19 notandandABxorB!C
+# ((B notor C) and (A xor C))
+1a andnotorBCxorAC
+# ((A and C) xor (B notor C))
+1b xorandACnotorBC
+# ((C notor B) and (A xor B))
+1c andnotorCBxorAB
+# ((A and B) xor (C notor B))
+1d xorandABnotorCB
+# ((B notand A) and C)
+20 andnotandBAC
+# (B notand (A notor C))
+23 notandBnotorAC
+# ((A xor B) and (B xor C))
+24 andxorABxorBC
+# ((A and B) notand (A xor not (C)))
+25 notandandABxorA!C
+# ((A notor C) and (B xor C))
+26 andnotorACxorBC
+# ((B and C) xor (A notor C))
+27 xorandBCnotorAC
+# ((A notor C) and (not (A) xor (B xor C)))
+29 andnotorACxor!AxorBC
+# ((B notand (C notand A)) xor (B notor (A notand C)))
+2b xornotandBnotandCAnotorBnotandAC
+# ((B or C) and (A xor B))
+2c andorBCxorAB
+# (A xor (C notor B))
+2d xorAnotorCB
+# (A notor (B notand C))
+2f notorAnotandBC
+# (B notand (C notor A))
+31 notandBnotorCA
+# (B notand (A or C))
+32 notandBorAC
+# ((C notor A) and (A xor B))
+34 andnotorCAxorAB
+# ((A and B) xor (C notor A))
+35 xorandABnotorCA
+# ((A or C) and (A xor B))
+38 andorACxorAB
+# (B xor (C notor A))
+39 xorBnotorCA
+# (B notor (A notand C))
+3b notorBnotandAC
+# ((A or C) notor (A xor B))
+3d notororACxorAB
+# ((A notand C) or (A xor B))
+3e ornotandACxorAB
+# ((C notand A) and B)
+40 andnotandCAB
+# ((A xor C) and (B xor C))
+42 andxorACxorBC
+# ((A and C) notand (A xor not (B)))
+43 notandandACxorA!B
+# (C notand (A notor B))
+45 notandCnotorAB
+# ((A notor B) and (B xor C))
+46 andnotorABxorBC
+# ((B and C) xor (A notor B))
+47 xorandBCnotorAB
+# ((A notor B) and (not (A) xor (B xor C)))
+49 andnotorABxor!AxorBC
+# ((B or C) and (A xor C))
+4a andorBCxorAC
+# (A xor (B notor C))
+4b xorAnotorBC
+# ((C notand (B notand A)) xor (C notor (A notand B)))
+4d xornotandCnotandBAnotorCnotandAB
+# (A notor (C notand B))
+4f notorAnotandCB
+# (C notand (B notor A))
+51 notandCnotorBA
+# ((B notor A) and (A xor C))
+52 andnotorBAxorAC
+# ((A and C) xor (B notor A))
+53 xorandACnotorBA
+# (C notand (A or B))
+54 notandCorAB
+# ((A or B) and (A xor C))
+58 andorABxorAC
+# (C xor (B notor A))
+59 xorCnotorBA
+# ((A or B) notor (A xor C))
+5b notororABxorAC
+# (C notor (A notand B))
+5d notorCnotandAB
+# ((C notand B) or (A xor C))
+5e ornotandCBxorAC
+# ((B notor A) and (not (B) xor (A xor C)))
+61 andnotorBAxor!BxorAC
+# ((A or C) and (B xor C))
+62 andorACxorBC
+# (B xor (A notor C))
+63 xorBnotorAC
+# ((A or B) and (B xor C))
+64 andorABxorBC
+# (C xor (A notor B))
+65 xorCnotorAB
+# ((A or B) notor (B xor C))
+67 notororABxorBC
+# (((A notand C) and B) or (B xor (A notor C)))
+6b orandnotandACBxorBnotorAC
+# (((C notand B) and A) or (A xor (C notor B)))
+6d orandnotandCBAxorAnotorCB
+# ((A notand B) or (B xor C))
+6e ornotandABxorBC
+# (A notor (B xor C))
+6f notorAxorBC
+# ((C notand (A notand B)) xor (C notor (B notand A)))
+71 xornotandCnotandABnotorCnotandBA
+# (B notor (C notand A))
+73 notorBnotandCA
+# (C notor (B notand A))
+75 notorCnotandBA
+# ((B notand A) or (B xor C))
+76 ornotandBAxorBC
+# (((B notand A) and C) or (C xor (B notor A)))
+79 orandnotandBACxorCnotorBA
+# ((B notand A) or (A xor C))
+7a ornotandBAxorAC
+# (B notor (A xor C))
+7b notorBxorAC
+# ((C notand A) or (A xor B))
+7c ornotandCAxorAB
+# (C notor (A xor B))
+7d notorCxorAB
+# ((A xor B) or (A xor C))
+7e orxorABxorAC
+# ((A and C) notor (B notand A))
+7f notorandACnotandBA
+# ((A xor C) notand (A xor not (B)))
+81 notandxorACxorA!B
+# ((A xor B) notand (A notor C))
+83 notandxorABnotorAC
+# ((A xor C) notand (C notor B))
+85 notandxorACnotorCB
+# ((B or C) and (C xor (A xor B)))
+86 andorBCxorCxorAB
+# ((B xor C) notand (A notor B))
+89 notandxorBCnotorAB
+# (C and (A notor B))
+8a andCnotorAB
+# ((A notor B) and (B notor C))
+8b andnotorABnotorBC
+# (B and (A notor C))
+8c andBnotorAC
+# ((C notor B) and (A notor C))
+8d andnotorCBnotorAC
+# (A notor (B and C))
+8f notorAandBC
+# ((B xor C) notand (B notor A))
+91 notandxorBCnotorBA
+# ((A or C) and (C xor (A xor B)))
+92 andorACxorCxorAB
+# ((A or B) and (B xor (A xor C)))
+94 andorABxorBxorAC
+# (((B notor A) xor A) or (A xor (B xor C)))
+97 orxornotorBAAxorAxorBC
+# ((B xor C) notand (A or B))
+98 notandxorBCorAB
+# ((B notand A) xor C)
+9a xornotandBAC
+# ((B xor C) notor (A notand C))
+9b notorxorBCnotandAC
+# ((C notand A) xor B)
+9c xornotandCAB
+# ((B xor C) notor (A notand B))
+9d notorxorBCnotandAB
+# ((B and C) or (C xor (A xor B)))
+9e orandBCxorCxorAB
+# ((A xor C) notand (B notor A))
+a1 notandxorACnotorBA
+# (C and (B notor A))
+a2 andCnotorBA
+# ((B notor A) and (A notor C))
+a3 andnotorBAnotorAC
+# ((A xor C) notand (A or B))
+a4 notandxorACorAB
+# ((A notand B) xor C)
+a6 xornotandABC
+# ((A xor C) notor (B notand C))
+a7 notorxorACnotandBC
+# ((A xor C) notor (B and C))
+ad notorxorACandBC
+# ((A notand B) or C)
+ae ornotandABC
+# (A and (B notor C))
+b0 andAnotorBC
+# ((C notor A) and (B notor C))
+b1 andnotorCAnotorBC
+# (B notor (A and C))
+b3 notorBandAC
+# ((C notand B) xor A)
+b4 xornotandCBA
+# ((A xor C) notor (B notand A))
+b5 notorxorACnotandBA
+# ((A and C) or (C xor (A xor B)))
+b6 orandACxorCxorAB
+# ((B xor C) notor (A and C))
+b9 notorxorBCandAC
+# ((B notand A) or C)
+ba ornotandBAC
+# ((A and C) or (A xor B))
+bc orandACxorAB
+# ((A xor C) notor (A xor B))
+bd notorxorACxorAB
+# ((A xor B) notand (C notor A))
+c1 notandxorABnotorCA
+# ((A xor B) notand (A or C))
+c2 notandxorABorAC
+# (B and (C notor A))
+c4 andBnotorCA
+# ((C notor A) and (A notor B))
+c5 andnotorCAnotorAB
+# ((A notand C) xor B)
+c6 xornotandACB
+# ((A xor B) notor (C notand B))
+c7 notorxorABnotandCB
+# ((A xor B) notor (B and C))
+cb notorxorABandBC
+# ((A notand C) or B)
+ce ornotandACB
+# (A and (C notor B))
+d0 andAnotorCB
+# ((B notor A) and (C notor B))
+d1 andnotorBAnotorCB
+# ((B notand C) xor A)
+d2 xornotandBCA
+# ((A xor B) notor (C notand A))
+d3 notorxorABnotandCA
+# (C notor (A and B))
+d5 notorCandAB
+# ((A and B) or (B xor (A xor C)))
+d6 orandABxorBxorAC
+# ((B xor C) notor (A and B))
+d9 notorxorBCandAB
+# ((A and B) or (A xor C))
+da orandABxorAC
+# ((A xor B) notor (A xor C))
+db notorxorABxorAC
+# ((C notand A) or B)
+dc ornotandCAB
+# ((A xor B) notor (A and C))
+e3 notorxorABandAC
+# ((A xor C) notor (A and B))
+e5 notorxorACandAB
+# ((A and B) or (B xor C))
+e6 orandABxorBC
+# ((A xor B) notor (B xor C))
+e7 notorxorABxorBC
+# ((A and B) or (B xor (A xor not (C))))
+e9 orandABxorBxorA!C
+# (B or (A notor C))
+ef orBnotorAC
+# ((B notand C) or A)
+f2 ornotandBCA
+# ((C notand B) or A)
+f4 ornotandCBA
+# (A or (B notor C))
+fb orAnotorBC
+# (A or (C notor B))
+fd orAnotorCB
