@@ -1,6 +1,6 @@
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x00_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x00_impl_() {
     const simde__m128i c0 = simde_mm_setzero_si128();
     return c0;
 }
@@ -25,7 +25,7 @@ simde_x_mm_ternarylogic_0x02_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x03_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x03_impl_(simde__m128i A, simde__m128i B) {
     const simde__m128i t0 = simde_mm_or_si128(B, A);
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t1 = simde_mm_xor_si128(t0, c1);
@@ -42,7 +42,7 @@ simde_x_mm_ternarylogic_0x04_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x05_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x05_impl_(simde__m128i A, simde__m128i C) {
     const simde__m128i t0 = simde_mm_or_si128(C, A);
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t1 = simde_mm_xor_si128(t0, c1);
@@ -87,7 +87,7 @@ simde_x_mm_ternarylogic_0x09_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x0a_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x0a_impl_(simde__m128i A, simde__m128i C) {
     const simde__m128i t0 = simde_mm_andnot_si128(A, C);
     return t0;
 }
@@ -104,7 +104,7 @@ simde_x_mm_ternarylogic_0x0b_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x0c_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x0c_impl_(simde__m128i A, simde__m128i B) {
     const simde__m128i t0 = simde_mm_andnot_si128(A, B);
     return t0;
 }
@@ -129,7 +129,7 @@ simde_x_mm_ternarylogic_0x0e_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x0f_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x0f_impl_(simde__m128i A) {
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t0 = simde_mm_xor_si128(A, c1);
     return t0;
@@ -145,7 +145,7 @@ simde_x_mm_ternarylogic_0x10_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x11_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x11_impl_(simde__m128i B, simde__m128i C) {
     const simde__m128i t0 = simde_mm_or_si128(C, B);
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t1 = simde_mm_xor_si128(t0, c1);
@@ -304,7 +304,7 @@ simde_x_mm_ternarylogic_0x21_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x22_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x22_impl_(simde__m128i B, simde__m128i C) {
     const simde__m128i t0 = simde_mm_andnot_si128(B, C);
     return t0;
 }
@@ -432,7 +432,7 @@ simde_x_mm_ternarylogic_0x2f_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x30_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x30_impl_(simde__m128i A, simde__m128i B) {
     const simde__m128i t0 = simde_mm_andnot_si128(B, A);
     return t0;
 }
@@ -457,7 +457,7 @@ simde_x_mm_ternarylogic_0x32_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x33_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x33_impl_(simde__m128i B) {
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t0 = simde_mm_xor_si128(B, c1);
     return t0;
@@ -537,7 +537,7 @@ simde_x_mm_ternarylogic_0x3b_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x3c_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x3c_impl_(simde__m128i A, simde__m128i B) {
     const simde__m128i t0 = simde_mm_xor_si128(B, A);
     return t0;
 }
@@ -564,7 +564,7 @@ simde_x_mm_ternarylogic_0x3e_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x3f_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x3f_impl_(simde__m128i A, simde__m128i B) {
     const simde__m128i t0 = simde_mm_and_si128(B, A);
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t1 = simde_mm_xor_si128(t0, c1);
@@ -610,7 +610,7 @@ simde_x_mm_ternarylogic_0x43_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x44_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x44_impl_(simde__m128i B, simde__m128i C) {
     const simde__m128i t0 = simde_mm_andnot_si128(C, B);
     return t0;
 }
@@ -719,7 +719,7 @@ simde_x_mm_ternarylogic_0x4f_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x50_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x50_impl_(simde__m128i A, simde__m128i C) {
     const simde__m128i t0 = simde_mm_andnot_si128(C, A);
     return t0;
 }
@@ -763,7 +763,7 @@ simde_x_mm_ternarylogic_0x54_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x55_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x55_impl_(simde__m128i C) {
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t0 = simde_mm_xor_si128(C, c1);
     return t0;
@@ -807,7 +807,7 @@ simde_x_mm_ternarylogic_0x59_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x5a_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x5a_impl_(simde__m128i A, simde__m128i C) {
     const simde__m128i t0 = simde_mm_xor_si128(C, A);
     return t0;
 }
@@ -851,7 +851,7 @@ simde_x_mm_ternarylogic_0x5e_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x5f_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x5f_impl_(simde__m128i A, simde__m128i C) {
     const simde__m128i t0 = simde_mm_and_si128(C, A);
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t1 = simde_mm_xor_si128(t0, c1);
@@ -915,7 +915,7 @@ simde_x_mm_ternarylogic_0x65_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x66_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x66_impl_(simde__m128i B, simde__m128i C) {
     const simde__m128i t0 = simde_mm_xor_si128(C, B);
     return t0;
 }
@@ -1070,7 +1070,7 @@ simde_x_mm_ternarylogic_0x76_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x77_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x77_impl_(simde__m128i B, simde__m128i C) {
     const simde__m128i t0 = simde_mm_and_si128(C, B);
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t1 = simde_mm_xor_si128(t0, c1);
@@ -1227,7 +1227,7 @@ simde_x_mm_ternarylogic_0x87_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x88_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x88_impl_(simde__m128i B, simde__m128i C) {
     const simde__m128i t0 = simde_mm_and_si128(C, B);
     return t0;
 }
@@ -1380,7 +1380,7 @@ simde_x_mm_ternarylogic_0x98_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0x99_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0x99_impl_(simde__m128i B, simde__m128i C) {
     const simde__m128i t0 = simde_mm_xor_si128(C, B);
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t1 = simde_mm_xor_si128(t0, c1);
@@ -1445,7 +1445,7 @@ simde_x_mm_ternarylogic_0x9f_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xa0_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xa0_impl_(simde__m128i A, simde__m128i C) {
     const simde__m128i t0 = simde_mm_and_si128(C, A);
     return t0;
 }
@@ -1487,7 +1487,7 @@ simde_x_mm_ternarylogic_0xa4_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xa5_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xa5_impl_(simde__m128i A, simde__m128i C) {
     const simde__m128i t0 = simde_mm_xor_si128(C, A);
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t1 = simde_mm_xor_si128(t0, c1);
@@ -1532,7 +1532,7 @@ simde_x_mm_ternarylogic_0xa9_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xaa_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xaa_impl_(simde__m128i C) {
     return C;
 }
 
@@ -1573,7 +1573,7 @@ simde_x_mm_ternarylogic_0xae_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xaf_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xaf_impl_(simde__m128i A, simde__m128i C) {
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t0 = simde_mm_cmov_si128(C, c1, A);
     return t0;
@@ -1679,7 +1679,7 @@ simde_x_mm_ternarylogic_0xba_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xbb_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xbb_impl_(simde__m128i B, simde__m128i C) {
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t0 = simde_mm_cmov_si128(C, c1, B);
     return t0;
@@ -1725,7 +1725,7 @@ simde_x_mm_ternarylogic_0xbf_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xc0_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xc0_impl_(simde__m128i A, simde__m128i B) {
     const simde__m128i t0 = simde_mm_and_si128(B, A);
     return t0;
 }
@@ -1750,7 +1750,7 @@ simde_x_mm_ternarylogic_0xc2_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xc3_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xc3_impl_(simde__m128i A, simde__m128i B) {
     const simde__m128i t0 = simde_mm_xor_si128(B, A);
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t1 = simde_mm_xor_si128(t0, c1);
@@ -1829,7 +1829,7 @@ simde_x_mm_ternarylogic_0xcb_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xcc_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xcc_impl_(simde__m128i B) {
     return B;
 }
 
@@ -1853,7 +1853,7 @@ simde_x_mm_ternarylogic_0xce_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xcf_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xcf_impl_(simde__m128i A, simde__m128i B) {
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t0 = simde_mm_cmov_si128(B, c1, A);
     return t0;
@@ -1979,7 +1979,7 @@ simde_x_mm_ternarylogic_0xdc_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xdd_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xdd_impl_(simde__m128i B, simde__m128i C) {
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t0 = simde_mm_cmov_si128(B, c1, C);
     return t0;
@@ -2133,7 +2133,7 @@ simde_x_mm_ternarylogic_0xed_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xee_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xee_impl_(simde__m128i B, simde__m128i C) {
     const simde__m128i t0 = simde_mm_or_si128(C, B);
     return t0;
 }
@@ -2149,7 +2149,7 @@ simde_x_mm_ternarylogic_0xef_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xf0_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xf0_impl_(simde__m128i A) {
     return A;
 }
 
@@ -2173,7 +2173,7 @@ simde_x_mm_ternarylogic_0xf2_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xf3_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xf3_impl_(simde__m128i A, simde__m128i B) {
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t0 = simde_mm_cmov_si128(A, c1, B);
     return t0;
@@ -2189,7 +2189,7 @@ simde_x_mm_ternarylogic_0xf4_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xf5_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xf5_impl_(simde__m128i A, simde__m128i C) {
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     const simde__m128i t0 = simde_mm_cmov_si128(A, c1, C);
     return t0;
@@ -2233,7 +2233,7 @@ simde_x_mm_ternarylogic_0xf9_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xfa_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xfa_impl_(simde__m128i A, simde__m128i C) {
     const simde__m128i t0 = simde_mm_or_si128(C, A);
     return t0;
 }
@@ -2249,7 +2249,7 @@ simde_x_mm_ternarylogic_0xfb_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xfc_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xfc_impl_(simde__m128i A, simde__m128i B) {
     const simde__m128i t0 = simde_mm_or_si128(B, A);
     return t0;
 }
@@ -2273,7 +2273,7 @@ simde_x_mm_ternarylogic_0xfe_impl_(simde__m128i A, simde__m128i B, simde__m128i 
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde__m128i
-simde_x_mm_ternarylogic_0xff_impl_(simde__m128i A, simde__m128i B, simde__m128i C) {
+simde_x_mm_ternarylogic_0xff_impl_() {
     const simde__m128i c1 = simde_mm_set1_epi32(-1);
     return c1;
 }

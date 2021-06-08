@@ -1,6 +1,6 @@
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x00_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x00_impl_() {
     const simde_int32x4_t c0 = simde_vdupq_n_s32(0);
     return c0;
 }
@@ -24,7 +24,7 @@ simde_x_ternarylogic_0x02_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x03_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x03_impl_(simde_int32x4_t A, simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_vorrq_s32(B, A);
     const simde_int32x4_t t1 = simde_vmvnq_s32(t0);
     return t1;
@@ -40,7 +40,7 @@ simde_x_ternarylogic_0x04_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x05_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x05_impl_(simde_int32x4_t A, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vorrq_s32(C, A);
     const simde_int32x4_t t1 = simde_vmvnq_s32(t0);
     return t1;
@@ -82,7 +82,7 @@ simde_x_ternarylogic_0x09_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x0a_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x0a_impl_(simde_int32x4_t A, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vbicq_s32(C, A);
     return t0;
 }
@@ -99,7 +99,7 @@ simde_x_ternarylogic_0x0b_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x0c_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x0c_impl_(simde_int32x4_t A, simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_vbicq_s32(B, A);
     return t0;
 }
@@ -124,7 +124,7 @@ simde_x_ternarylogic_0x0e_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x0f_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x0f_impl_(simde_int32x4_t A) {
     const simde_int32x4_t t0 = simde_vmvnq_s32(A);
     return t0;
 }
@@ -139,7 +139,7 @@ simde_x_ternarylogic_0x10_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x11_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x11_impl_(simde_int32x4_t B, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vorrq_s32(C, B);
     const simde_int32x4_t t1 = simde_vmvnq_s32(t0);
     return t1;
@@ -294,7 +294,7 @@ simde_x_ternarylogic_0x21_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x22_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x22_impl_(simde_int32x4_t B, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vbicq_s32(C, B);
     return t0;
 }
@@ -423,7 +423,7 @@ simde_x_ternarylogic_0x2f_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x30_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x30_impl_(simde_int32x4_t A, simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_vbicq_s32(A, B);
     return t0;
 }
@@ -447,7 +447,7 @@ simde_x_ternarylogic_0x32_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x33_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x33_impl_(simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_vmvnq_s32(B);
     return t0;
 }
@@ -527,7 +527,7 @@ simde_x_ternarylogic_0x3b_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x3c_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x3c_impl_(simde_int32x4_t A, simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_veorq_s32(B, A);
     return t0;
 }
@@ -552,7 +552,7 @@ simde_x_ternarylogic_0x3e_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x3f_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x3f_impl_(simde_int32x4_t A, simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_vandq_s32(B, A);
     const simde_int32x4_t t1 = simde_vmvnq_s32(t0);
     return t1;
@@ -597,7 +597,7 @@ simde_x_ternarylogic_0x43_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x44_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x44_impl_(simde_int32x4_t B, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vbicq_s32(B, C);
     return t0;
 }
@@ -706,7 +706,7 @@ simde_x_ternarylogic_0x4f_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x50_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x50_impl_(simde_int32x4_t A, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vbicq_s32(A, C);
     return t0;
 }
@@ -749,7 +749,7 @@ simde_x_ternarylogic_0x54_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x55_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x55_impl_(simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vmvnq_s32(C);
     return t0;
 }
@@ -792,7 +792,7 @@ simde_x_ternarylogic_0x59_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x5a_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x5a_impl_(simde_int32x4_t A, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_veorq_s32(C, A);
     return t0;
 }
@@ -835,7 +835,7 @@ simde_x_ternarylogic_0x5e_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x5f_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x5f_impl_(simde_int32x4_t A, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vandq_s32(C, A);
     const simde_int32x4_t t1 = simde_vmvnq_s32(t0);
     return t1;
@@ -901,7 +901,7 @@ simde_x_ternarylogic_0x65_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x66_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x66_impl_(simde_int32x4_t B, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_veorq_s32(C, B);
     return t0;
 }
@@ -1057,7 +1057,7 @@ simde_x_ternarylogic_0x76_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x77_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x77_impl_(simde_int32x4_t B, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vandq_s32(C, B);
     const simde_int32x4_t t1 = simde_vmvnq_s32(t0);
     return t1;
@@ -1216,7 +1216,7 @@ simde_x_ternarylogic_0x87_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x88_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x88_impl_(simde_int32x4_t B, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vandq_s32(C, B);
     return t0;
 }
@@ -1374,7 +1374,7 @@ simde_x_ternarylogic_0x98_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0x99_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0x99_impl_(simde_int32x4_t B, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_veorq_s32(C, B);
     const simde_int32x4_t t1 = simde_vmvnq_s32(t0);
     return t1;
@@ -1439,7 +1439,7 @@ simde_x_ternarylogic_0x9f_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xa0_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xa0_impl_(simde_int32x4_t A, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vandq_s32(C, A);
     return t0;
 }
@@ -1484,7 +1484,7 @@ simde_x_ternarylogic_0xa4_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xa5_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xa5_impl_(simde_int32x4_t A, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_veorq_s32(C, A);
     const simde_int32x4_t t1 = simde_vmvnq_s32(t0);
     return t1;
@@ -1528,7 +1528,7 @@ simde_x_ternarylogic_0xa9_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xaa_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xaa_impl_(simde_int32x4_t C) {
     return C;
 }
 
@@ -1570,7 +1570,7 @@ simde_x_ternarylogic_0xae_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xaf_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xaf_impl_(simde_int32x4_t A, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vornq_s32(C, A);
     return t0;
 }
@@ -1678,7 +1678,7 @@ simde_x_ternarylogic_0xba_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xbb_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xbb_impl_(simde_int32x4_t B, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vornq_s32(C, B);
     return t0;
 }
@@ -1721,7 +1721,7 @@ simde_x_ternarylogic_0xbf_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xc0_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xc0_impl_(simde_int32x4_t A, simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_vandq_s32(B, A);
     return t0;
 }
@@ -1748,7 +1748,7 @@ simde_x_ternarylogic_0xc2_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xc3_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xc3_impl_(simde_int32x4_t A, simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_veorq_s32(B, A);
     const simde_int32x4_t t1 = simde_vmvnq_s32(t0);
     return t1;
@@ -1830,7 +1830,7 @@ simde_x_ternarylogic_0xcb_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xcc_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xcc_impl_(simde_int32x4_t B) {
     return B;
 }
 
@@ -1852,7 +1852,7 @@ simde_x_ternarylogic_0xce_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xcf_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xcf_impl_(simde_int32x4_t A, simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_vornq_s32(B, A);
     return t0;
 }
@@ -1978,7 +1978,7 @@ simde_x_ternarylogic_0xdc_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xdd_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xdd_impl_(simde_int32x4_t B, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vornq_s32(B, C);
     return t0;
 }
@@ -2130,7 +2130,7 @@ simde_x_ternarylogic_0xed_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xee_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xee_impl_(simde_int32x4_t B, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vorrq_s32(C, B);
     return t0;
 }
@@ -2145,7 +2145,7 @@ simde_x_ternarylogic_0xef_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xf0_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xf0_impl_(simde_int32x4_t A) {
     return A;
 }
 
@@ -2167,7 +2167,7 @@ simde_x_ternarylogic_0xf2_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xf3_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xf3_impl_(simde_int32x4_t A, simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_vornq_s32(A, B);
     return t0;
 }
@@ -2182,7 +2182,7 @@ simde_x_ternarylogic_0xf4_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xf5_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xf5_impl_(simde_int32x4_t A, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vornq_s32(A, C);
     return t0;
 }
@@ -2221,7 +2221,7 @@ simde_x_ternarylogic_0xf9_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xfa_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xfa_impl_(simde_int32x4_t A, simde_int32x4_t C) {
     const simde_int32x4_t t0 = simde_vorrq_s32(C, A);
     return t0;
 }
@@ -2236,7 +2236,7 @@ simde_x_ternarylogic_0xfb_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xfc_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xfc_impl_(simde_int32x4_t A, simde_int32x4_t B) {
     const simde_int32x4_t t0 = simde_vorrq_s32(B, A);
     return t0;
 }
@@ -2259,7 +2259,7 @@ simde_x_ternarylogic_0xfe_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int3
 
 SIMDE_FUNCTION_ATTRIBUTES
 simde_int32x4_t
-simde_x_ternarylogic_0xff_impl_(simde_int32x4_t A, simde_int32x4_t B, simde_int32x4_t C) {
+simde_x_ternarylogic_0xff_impl_() {
     const simde_int32x4_t c1 = simde_vdupq_n_s32(-1);
     return c1;
 }

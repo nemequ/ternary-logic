@@ -1,6 +1,6 @@
 SIMDE_FUNCTION_ATTRIBUTES
 %(TYPE)s
-simde_x_%(EXTENTION)sternarylogic_0x%(CODE)02x_impl_(%(TYPE)s A, %(TYPE)s B, %(TYPE)s C) {
+simde_x_%(EXTENTION)sternarylogic_0x%(CODE)02x_impl_(%(ARGUMENT)s) {
     %(BODY)s
 }
 

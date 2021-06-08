@@ -198,6 +198,31 @@ class CodeGenerator:
         from lib.bodygen import BodyGenerator
         g = BodyGenerator(lowered, self.assembler_class())
         body = g.run()
+        
+        A_active = 0
+        B_active = 0
+        C_active = 0
+
+        argument = ""
+        for statements in body:
+            if statements.find('A') >= 0:
+                A_active = 1
+            if statements.find('B') >= 0:
+                B_active = 1
+            if statements.find('C') >= 0:
+                C_active = 1
+
+        if A_active:
+            argument += self.assembler_class().type + " A"
+        if B_active:
+            if A_active:
+                argument += ", "
+            argument += self.assembler_class().type + " B"
+        if C_active:
+            if B_active or A_active:
+                argument += ", "
+            argument += self.assembler_class().type + " C"
+
         extention = ""
         if self.options.target == Target_SSE:
             extention = "mm_"
@@ -216,7 +241,8 @@ class CodeGenerator:
             'CODE'  : code,
             'BODY'  : indent_lines(body, self.body_indent),
             'COMMENT' : comment,
-            'EXTENTION' : extention
+            'EXTENTION' : extention,
+            'ARGUMENT' : argument
         }
 
         return (len(body), self.function_pattern % params)
