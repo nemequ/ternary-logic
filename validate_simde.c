@@ -1,9 +1,8 @@
-#include <cstdlib>
-#include <cstdio>
-#include <cstdint>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdint.h>
 
-#include "ternary_x86_64.cpp"
-#include "ternary_x86_32.cpp"
+#include "ternary_simde.c"
 
 #define DEFINE_VALIDATE(K) \
     void HEDLEY_CONCAT(validate_, K)(void) { \

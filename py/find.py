@@ -115,6 +115,7 @@ Target_SSE      = 10
 Target_AVX2     = 20
 Target_XOP      = 30
 Target_NEON     = 70
+Target_SIMDe    = 80
 
 def parse_args(args):
     from optparse import OptionParser
@@ -123,7 +124,7 @@ def parse_args(args):
 
     parser.add_option(
         "--target",
-        help="choose target (SSE, AVX2, XOP, NEON)"
+        help="choose target (SSE, AVX2, XOP, NEON, SIMDe)"
     )
 
     parser.add_option(
@@ -147,8 +148,10 @@ def parse_args(args):
         options.target = Target_XOP
     elif options.target.lower() == 'neon':
         options.target = Target_NEON
+    elif options.target.lower() == 'simde':
+        options.target = Target_SIMDe
     else:
-        valid = ('sse', 'avx2', 'xop', 'neon')
+        valid = ('sse', 'avx2', 'xop', 'neon', 'simde')
         parser.error("--target expects: %s" % ', '.join(valid))
 
     return options
@@ -183,6 +186,11 @@ class Application:
         elif self.options.target == Target_NEON:
             from lib.lowering_neon  import transform
             from lib.assembler_neon import AssemblerNEON as AssemblerClass
+            self.transform = transform
+            self.AssemblerClass = AssemblerClass
+        elif self.options.target == Target_SIMDe:
+            from lib.lowering_simde import transform
+            from lib.assembler_simde import AssemblerSIMDe as AssemblerClass
             self.transform = transform
             self.AssemblerClass = AssemblerClass
 

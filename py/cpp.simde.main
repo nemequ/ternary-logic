@@ -1,0 +1,3 @@
+#include <simde/simde-common.h>
+
+%(FUNCTIONS)s

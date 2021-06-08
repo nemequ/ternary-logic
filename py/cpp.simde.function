@@ -1,0 +1,6 @@
+SIMDE_FUNCTION_ATTRIBUTES
+%(TYPE)s
+simde_x_ternarylogic_0x%(CODE)02x_impl_(%(TYPE)s A, %(TYPE)s B, %(TYPE)s C) {
+    %(BODY)s
+}
+

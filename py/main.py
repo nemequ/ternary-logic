@@ -11,6 +11,7 @@ Target_X86_64   = 40
 Target_X86_32   = 50
 Target_AVX512   = 60
 Target_NEON     = 70
+Target_SIMDe    = 80
 
 
 def main():
@@ -24,7 +25,7 @@ def parse_args(args):
     parser = OptionParser()
     parser.add_option(
         "--target",
-        help="choose target (SSE, AVX2, XOP, X86_64, X86_32, NEON)"
+        help="choose target (SSE, AVX2, XOP, X86_64, X86_32, NEON, SIMDe)"
     )
 
     parser.add_option(
@@ -60,8 +61,10 @@ def parse_args(args):
         options.target = Target_X86_32
     elif options.target.lower() == 'neon':
         options.target = Target_NEON
+    elif options.target.lower() == 'simde':
+        options.target = Target_SIMDe
     else:
-        valid = ('sse', 'avx2', 'xop', 'x86_64', 'x86_32', 'avx512', 'neon')
+        valid = ('sse', 'avx2', 'xop', 'x86_64', 'x86_32', 'avx512', 'neon', 'simde')
         parser.error("--target expects: %s" % ', '.join(valid))
 
     return options
@@ -103,12 +106,14 @@ class CodeGenerator:
         import lib.lowering_xop
         import lib.lowering_x86
         import lib.lowering_neon
+        import lib.lowering_simde
         import lib.assembler_sse
         import lib.assembler_avx2
         import lib.assembler_avx512
         import lib.assembler_xop
         import lib.assembler_x86
         import lib.assembler_neon
+        import lib.assembler_simde
 
         if self.options.target == Target_SSE:
             self.lowering  = lib.lowering_sse.transform
@@ -138,6 +143,10 @@ class CodeGenerator:
             self.lowering = lib.lowering_neon.transform
             self.assembler_class = lib.assembler_neon.AssemblerNEON
 
+        elif self.options.target == Target_SIMDe:
+            self.lowering = lib.lowering_simde.transform
+            self.assembler_class = lib.assembler_simde.AssemblerSIMDe
+
         with get_file(self.get_function_file()) as f:
             self.function_pattern = f.read()
 
@@ -163,12 +172,17 @@ class CodeGenerator:
             return 'cpp.x86_32.main'
         elif self.options.target == Target_NEON:
             return 'cpp.neon.main'
+        elif self.options.target == Target_SIMDe:
+            return 'cpp.simde.main'
         else:
             assert False
 
 
     def get_function_file(self):
-        return 'cpp.function'
+        if self.options.target == Target_SIMDe:
+            return 'cpp.simde.function'
+        else:
+            return 'cpp.function'
 
 
     def load(self):

@@ -1,7 +1,7 @@
 FLAGS=-std=c++11 -O2 -Wall -pedantic
 PYDEPS=py/*.py py/lib/*.py
 DATA=py/data/*.txt
-ALL=validate_sse validate_avx2 validate_xop validate_x86 ternary_avx512.o ternary_neon.cpp
+ALL=validate_sse validate_avx2 validate_xop validate_x86 ternary_avx512.o ternary_neon.cpp ternary_simde
 PYTHON?=python
 
 all: $(ALL)
@@ -20,6 +20,9 @@ validate_x86: validate_x86.cpp ternary_x86_64.cpp ternary_x86_32.cpp
 
 validate_neon: validate_xop.cpp ternary_neon.cpp
 	$(CXX) $(FLAGS) validate_neon.cpp -o $@
+
+validate_simde: validate_simde.c ternary_simde.c
+	$(CC) $(CFLAGS) validate_simde.c -o $@
 
 ternary_avx512.o: ternary_avx512.cpp
 	$(CXX) $(FLAGS) -mavx512f $^ -c -o $@
@@ -44,6 +47,9 @@ ternary_x86_32.cpp: $(PYDEPS) py/cpp.function py/cpp.x86_32.main $(DATA)
 
 ternary_neon.cpp: $(PYDEPS) py/cpp.function py/cpp.neon.main $(DATA)
 	$(PYTHON) py/main.py --target=neon -o $@
+
+ternary_simde.c: $(PYDEPS) py/cpp.simde.function py/cpp.simde.main $(DATA)
+	$(PYTHON) py/main.py --target=simde -o $@
 
 
 test: validate_sse validate_x86
