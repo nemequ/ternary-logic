@@ -198,13 +198,25 @@ class CodeGenerator:
         from lib.bodygen import BodyGenerator
         g = BodyGenerator(lowered, self.assembler_class())
         body = g.run()
+        extention = ""
+        if self.options.target == Target_SSE:
+            extention = "mm_"
+        elif self.options.target == Target_AVX2:
+            extention = "mm256_"
+        elif self.options.target == Target_AVX512:
+            extention = "mm512_"
+        elif self.options.target == Target_XOP:
+            extention = "mm_"
+        else:
+            extention = ""
 
         params = {
             'TYPE'  : self.assembler_class().type,
             'NAME'  : self.options.name,
             'CODE'  : code,
             'BODY'  : indent_lines(body, self.body_indent),
-            'COMMENT' : comment
+            'COMMENT' : comment,
+            'EXTENTION' : extention
         }
 
         return (len(body), self.function_pattern % params)
